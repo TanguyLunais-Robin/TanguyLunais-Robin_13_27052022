@@ -1,3 +1,6 @@
+//React
+import { Component } from "react"
+
 //Styled components
 import styled from "styled-components"
 
@@ -11,6 +14,7 @@ const HERO = styled.div`
     background-repeat: no-repeat;
     height: 300px;
     position: relative;
+
     @media (min-width: 920px) {
         height: 400px;
         background-position: 0% 33%;
@@ -25,6 +29,7 @@ const HERO_CONTENT = styled.section`
     padding: 2rem;
     text-align: left;
     margin: 0 auto;
+
     @media (min-width: 920px) {
         position: absolute;
         top: 50px;
@@ -38,6 +43,7 @@ const SUBTITLE = styled.p`
     font-weight: bold;
     font-size: 1rem;
     margin: 0;
+
     @media (min-width: 920px) {
         font-size: 1.5rem;
     }
@@ -46,22 +52,25 @@ const SUBTITLE = styled.p`
 const TEXT = styled.p`
     margin-bottom: 0;
     font-size: 0.9rem;
+
     @media (min-width: 920px) {
         font-size: 1.2rem;
     }
 `
 
-function Hero () {
-    return (
-        <HERO>
-            <HERO_CONTENT>
-                <SUBTITLE>No fees.</SUBTITLE>
-                <SUBTITLE>No minimum deposit.</SUBTITLE>
-                <SUBTITLE>High interest rates.</SUBTITLE>
-                <TEXT>Open a savings account with Argent Bank today!</TEXT>
-            </HERO_CONTENT>
-        </HERO>
-    )
+class Hero extends Component {
+    render () {
+        return (
+            <HERO>
+                <HERO_CONTENT>
+                    <SUBTITLE>No fees.</SUBTITLE>
+                    <SUBTITLE>No minimum deposit.</SUBTITLE>
+                    <SUBTITLE>High interest rates.</SUBTITLE>
+                    <TEXT>Open a savings account with Argent Bank today!</TEXT>
+                </HERO_CONTENT>
+            </HERO>
+        )
+    }
 }
 
 export default Hero
